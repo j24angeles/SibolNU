@@ -1,0 +1,124 @@
+:root {
+    --color-brown: #583C0E;
+    --color-dark-green: #0B650A;
+    --color-light-mint: #DEE8D6;
+    --color-green: #10640C;
+    --color-white: #FDFCFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+}
+
+.navbar {
+    background-color: var(--color-white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .logo-image {
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: var(--color-dark-green);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 12px !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link:focus {
+    color: var(--color-brown);
+}
+
+.nav-link.active {
+    color: var(--color-green);
+    font-weight: 600;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brown);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link.active::after {
+    width: 70%;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0.4rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(11, 101, 10, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.2em;
+    height: 1.2em;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 8px;
+    }
+    
+    .nav-link {
+        padding: 10px 5px !important;
+        display: inline-block;
+    }
+    
+    .nav-link::after {
+        bottom: 6px;
+    }
+
+    .logo-image {
+        height: 45px;
+    }
+}
