@@ -2,16 +2,15 @@
 .contact-hero {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    min-height: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    min-height: 95vh;
 }
 
 .hero-text-column {
-    background-color: var(--color-light-mint);
     display: flex;
     align-items: center;
     padding: 120px 40px;
-    min-height: 600px;
+    min-height: 95vh;
 }
 
 .hero-content {
@@ -83,7 +82,7 @@
 /* Contact Info Section */
 .contact-info-section {
     padding: 60px 0;
-    background-color: var(--color-white);
+    background-color: var(--color-light-mint);
 }
 
 .contact-card {
