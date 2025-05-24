@@ -3,13 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sibol - Home</title>
+    <title>Sibol - Forum</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/content/global.css">
-    <link rel="stylesheet" href="/content/showcase.css">
+    <link rel="stylesheet" href="/content/forum.css">
+    <style>
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+        .spotlight-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+        }
+        .spotlight-photo {
+            width: 300px;
+            height: 200px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #81C784, #4CAF50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,7 +68,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/frontend/showcase.html">Showcase</a>
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/frontend/forum.html">Forum</a>
                         </li>
                         <li class="nav-item">
@@ -47,6 +83,491 @@
         </nav>
     </header>
 
+    <main>
+        <!-- Forum Hero Section -->
+        <section class="forum-hero">
+            <div class="hero-background"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="hero-content">
+                            <div class="hero-badge">
+                                <i class="fas fa-users"></i>
+                                <span>Community Driven</span>
+                            </div>
+                            <h1 class="hero-title">
+                                Garden <span class="highlight">Together</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Connect with fellow gardeners, share experiences, and grow your knowledge about sustainable gardening with Sibol Kakao.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">847</div>
+                                    <div class="stat-label">Members</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">142</div>
+                                    <div class="stat-label">Topics</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">1.2K</div>
+                                    <div class="stat-label">Posts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="forum-search-card">
+                            <h3>Start a Discussion</h3>
+                            <div class="search-input-group">
+                                <input type="text" class="form-control search-input" placeholder="Search topics or ask a question...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="quick-actions">
+                                <button class="quick-action-btn">
+                                    <i class="fas fa-plus"></i>
+                                    New Topic
+                                </button>
+                                <button class="quick-action-btn">
+                                    <i class="fas fa-camera"></i>
+                                    Share Photo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forum Categories -->
+        <section class="forum-categories">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">Popular Categories</h2>
+                    <p class="section-subtitle">Explore different aspects of sustainable gardening</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Getting Started</h4>
+                            <p class="category-desc">Tips for beginners using Sibol Kakao</p>
+                            <div class="category-stats">
+                                <span class="topics-count">32 topics</span>
+                                <span class="posts-count">248 posts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Success Stories</h4>
+                            <p class="category-desc">Share your gardening achievements</p>
+                            <div class="category-stats">
+                                <span class="topics-count">28 topics</span>
+                                <span class="posts-count">195 posts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h4>Q&A</h4>
+                            <p class="category-desc">Get help from experienced gardeners</p>
+                            <div class="category-stats">
+                                <span class="topics-count">45 topics</span>
+                                <span class="posts-count">387 posts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <h4>Sustainability</h4>
+                            <p class="category-desc">Eco-friendly gardening practices</p>
+                            <div class="category-stats">
+                                <span class="topics-count">37 topics</span>
+                                <span class="posts-count">289 posts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Discussions -->
+        <section class="recent-discussions">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Discussions</h2>
+                    <p class="section-subtitle">Join the latest conversations in our community</p>
+                </div>
+                
+                <div class="discussions-list">
+                    <!-- Featured Discussion -->
+                    <div class="discussion-card featured">
+                        <div class="discussion-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Featured</span>
+                        </div>
+                        <div class="discussion-content">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="user-details">
+                                    <span class="username">Maria Santos</span>
+                                    <span class="user-level">🌱 Green Thumb Expert</span>
+                                </div>
+                                <span class="post-time">2 hours ago</span>
+                            </div>
+                            <h3 class="discussion-title">Amazing Results with Sibol Kakao on My Tomatoes!</h3>
+                            <p class="discussion-preview">
+                                I've been using Sibol Kakao for 3 months now and the difference is incredible! My tomato plants have grown 40% larger and the fruits are so much more vibrant. Here are some before/after photos...
+                            </p>
+                            <div class="discussion-tags">
+                                <span class="tag">Success Story</span>
+                                <span class="tag">Tomatoes</span>
+                                <span class="tag">Before/After</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    24 likes
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    18 replies
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    156 views
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regular Discussions -->
+                    <div class="discussion-card">
+                        <div class="discussion-content">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="user-details">
+                                    <span class="username">Juan dela Cruz</span>
+                                    <span class="user-level">🌿 Garden Enthusiast</span>
+                                </div>
+                                <span class="post-time">4 hours ago</span>
+                            </div>
+                            <h3 class="discussion-title">Best application schedule for peppers?</h3>
+                            <p class="discussion-preview">
+                                Hi everyone! I'm new to using organic fertilizers and wondering about the optimal application schedule for bell peppers. Should I apply Sibol Kakao weekly or bi-weekly?
+                            </p>
+                            <div class="discussion-tags">
+                                <span class="tag">Question</span>
+                                <span class="tag">Peppers</span>
+                                <span class="tag">Schedule</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    8 likes
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    12 replies
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    89 views
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-content">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="user-details">
+                                    <span class="username">Anna Reyes</span>
+                                    <span class="user-level">🌺 Urban Gardener</span>
+                                </div>
+                                <span class="post-time">6 hours ago</span>
+                            </div>
+                            <h3 class="discussion-title">Comparison: Sibol Kakao vs Traditional Chemical Fertilizers</h3>
+                            <p class="discussion-preview">
+                                I did a 6-month side-by-side comparison in my urban garden. The results might surprise you! Organic really does make a difference for soil health and plant resilience...
+                            </p>
+                            <div class="discussion-tags">
+                                <span class="tag">Comparison</span>
+                                <span class="tag">Research</span>
+                                <span class="tag">Urban Garden</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    31 likes
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    27 replies
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    203 views
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-content">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user-astronaut"></i>
+                                </div>
+                                <div class="user-details">
+                                    <span class="username">Roberto Garcia</span>
+                                    <span class="user-level">🌳 Master Gardener</span>
+                                </div>
+                                <span class="post-time">8 hours ago</span>
+                            </div>
+                            <h3 class="discussion-title">DIY: Making the most of Sibol Kakao residue</h3>
+                            <p class="discussion-preview">
+                                Don't throw away the solid residue! Here are 5 creative ways I use the leftover material from Sibol Kakao to maximize benefits for my entire garden...
+                            </p>
+                            <div class="discussion-tags">
+                                <span class="tag">DIY</span>
+                                <span class="tag">Tips</span>
+                                <span class="tag">Zero Waste</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    19 likes
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    15 replies
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    134 views
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-content">
+                            <div class="user-info">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user-nurse"></i>
+                                </div>
+                                <div class="user-details">
+                                    <span class="username">Luz Mendoza</span>
+                                    <span class="user-level">🌱 Green Thumb Expert</span>
+                                </div>
+                                <span class="post-time">12 hours ago</span>
+                            </div>
+                            <h3 class="discussion-title">Seasonal gardening tips for Metro Manila climate</h3>
+                            <p class="discussion-preview">
+                                With the rainy season approaching, here are my top tips for adjusting your Sibol Kakao application and garden maintenance routine...
+                            </p>
+                            <div class="discussion-tags">
+                                <span class="tag">Seasonal</span>
+                                <span class="tag">Metro Manila</span>
+                                <span class="tag">Weather</span>
+                            </div>
+                            <div class="discussion-stats">
+                                <span class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    15 likes
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    9 replies
+                                </span>
+                                <span class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    98 views
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button class="btn-load-more">
+                        <i class="fas fa-chevron-down"></i>
+                        Load More Discussions
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Highlights -->
+        <section class="community-highlights">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">Community Highlights</h2>
+                    <p class="section-subtitle">Celebrating our amazing gardening community</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4>Member of the Month</h4>
+                            <div class="member-spotlight">
+                                <div class="spotlight-details">
+                                    <h5>Maria Santos</h5>
+                                    <p>Helped 45+ gardeners this month with expert advice on organic fertilizing techniques.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h4>Photo of the Week</h4>
+                            <div class="photo-spotlight">
+                                <div class="spotlight-photo">
+                                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop" alt="Garden Photo" class="spotlight-photo">
+                                </div>
+                                <div class="photo-caption">
+                                    <p><strong>Juan's Rooftop Garden</strong></p>
+                                    <p>"3 months with Sibol Kakao - incredible transformation!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Tip of the Week</h4>
+                            <div class="tip-spotlight">
+                                <div class="tip-content">
+                                    <h5>Double Dilution Method</h5>
+                                    <p>"For seedlings, dilute Sibol Kakao to 1:20 ratio instead of 1:10 for the first 2 weeks to prevent nutrient burn."</p>
+                                    <div class="tip-author">
+                                        <small>- Shared by Roberto Garcia</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Community CTA -->
+        <section class="join-community-cta">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="cta-content">
+                            <h2>Ready to Join Our Growing Community?</h2>
+                            <p>Connect with fellow gardeners, share your experiences, and grow together with sustainable gardening practices.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary cta-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Join Community
+                            </button>
+                            <button class="btn btn-outline-primary cta-btn">
+                                <i class="fas fa-plus"></i>
+                                Create Topic
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling animation on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-background');
+            const speed = scrolled * 0.5;
+            if (parallax) {
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.category-card, .discussion-card, .highlight-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Interactive features
+        document.querySelectorAll('.discussion-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'translateY(-2px)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Search functionality placeholder
+        document.querySelector('.search-btn').addEventListener('click', () => {
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput.value.trim()) {
+                alert(`Searching for: ${searchInput.value}`);
+            }
+        });
+
+        // Load more functionality
+        document.querySelector('.btn-load-more').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-chevron-down"></i> Load More Discussions';
+                alert('More discussions would be loaded here!');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
+
+
