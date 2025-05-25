@@ -31,7 +31,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Hero Section - Reduced Padding */
+/* Hero Section - Improved Mobile Padding */
 .hero-section {
     min-height: 90vh;
     display: flex;
@@ -40,6 +40,14 @@ html {
     position: relative;
     overflow: hidden;
     padding: 80px 0 40px;
+}
+
+/* Mobile padding improvement */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 60px;
+        min-height: 85vh;
+    }
 }
 
 .hero-background {
@@ -232,7 +240,7 @@ html {
 
 .hero-image-container {
     position: relative;
-    height: 450px;
+    height: 700px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,7 +250,7 @@ html {
 
 .hero-main-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 700px; 
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
@@ -867,7 +875,7 @@ html {
     transform: scale(1.2);
 }
 
-/* Community Section */
+/* Community Section - IMPROVED RESPONSIVENESS */
 .community-section {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--color-light-mint) 0%, #f8f9fa 100%);
@@ -879,6 +887,8 @@ html {
     overflow: hidden;
     box-shadow: var(--shadow-heavy);
     position: relative;
+    max-width: 100%;
+    height: auto;
 }
 
 .community-image::before {
@@ -903,6 +913,8 @@ html {
     height: auto;
     display: block;
     transition: var(--transition);
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .community-image:hover img {
@@ -960,6 +972,62 @@ html {
     text-align: center;
 }
 
+/* Mobile improvements for community section */
+@media (max-width: 991px) {
+    .community-content {
+        padding-left: 0;
+        margin-top: 3rem;
+        text-align: center;
+    }
+    
+    .community-content p {
+        max-width: 100%;
+    }
+    
+    .community-image img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .community-section {
+        padding: 60px 0;
+    }
+    
+    .community-content {
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .community-features li {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .community-image img {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .community-content h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .community-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .community-features {
+        margin-bottom: 2rem;
+    }
+    
+    .community-features li {
+        font-size: 0.95rem;
+    }
+}
+
 /* Newsletter Section - Improved */
 .newsletter-section {
     padding: 80px 0;
@@ -967,6 +1035,100 @@ html {
 }
 
 .newsletter-card {
-    background: var(--gradient-primary);
+    background: var(--color-white);
+    border: 2px solid var(--color-light-mint);
     border-radius: var(--border-radius);
+    padding: 3rem 2.5rem;
+    color: var(--color-brown);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    animation: fadeInUp 0.8s ease-out;
+    transition: var(--transition);
+}
+
+.newsletter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0.02;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.newsletter-card:hover::before {
+    opacity: 0.05;
+}
+
+.newsletter-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-dark-green);
+}
+
+.newsletter-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-content h2 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--color-brown);
+}
+
+.newsletter-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid var(--color-light-mint);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: var(--transition);
+    min-width: 250px;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--color-dark-green);
+    box-shadow: 0 0 0 3px rgba(11, 101, 10, 0.1);
+}
+
+.newsletter-form .btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-form input {
+        min-width: 280px;
+        width: 100%;
+    }
 }
