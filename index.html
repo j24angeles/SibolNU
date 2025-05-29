@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="/frontend/index.html">
+                <a class="navbar-brand" href="index.html">
                     <img src="/content/assets/Sibol Logo transparent.png" alt="Sibol Logo" class="logo-image">
                 </a>
                 
@@ -29,19 +29,19 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/frontend/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/frontend/showcase.html">Showcase</a>
+                            <a class="nav-link" href="showcase.html">Showcase</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/frontend/forum.html">Forum</a>
+                            <a class="nav-link" href="forum.html">Forum</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/frontend/aboutUs.html">About Us</a>
+                            <a class="nav-link" href="aboutUs.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/frontend/contactUs.html">Contact Us</a>
+                            <a class="nav-link" href="contactUs.html">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -155,36 +155,31 @@
                     <h2 class="section-title">Our Featured Products</h2>
                     <p class="section-subtitle">Premium organic solutions for your gardening needs</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge">Bestseller</div>
-                            <div class="product-image">
-                                <img src="/content/assets/bottle - front.png" alt="Madre de Cacao Liquid Fertilizer">
-                            </div>
-                            <div class="product-content">
-                                <h3>Liquid Organic Fertilizer</h3>
-                                <p class="price">₱299 <span class="unit">/ bottle</span></p>
-                                <p class="description">An all-natural liquid fertilizer derived from Madre de Cacao, ideal for improving soil nutrients.</p>
-                                <a href="/frontend/showcase.html" class="btn btn-outline-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="product-card">
-                            <div class="product-badge">New</div>
-                            <div class="product-image">
-                                <img src="/content/assets/residue - front.png" alt="Madre de Cacao Dried Leaf Residue">
-                            </div>
-                            <div class="product-content">
-                                <h3>Dried Leaf Residue</h3>
-                                <p class="price">₱199 <span class="unit">/ pack</span></p>
-                                <p class="description">Naturally enhances soil quality and promotes healthy root development.</p>
-                                <a href="/frontend/showcase.html" class="btn btn-outline-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
+          <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="product-card featured-product">
+            <div class="product-badge">Bestseller</div>
+            <div class="freebie-badge">FREEBIE for the First 20 Monthly Customers!</div>
+            <div class="product-image">
+                <img src="/content/assets/bottle - front.png" alt="Madre de Cacao Liquid Fertilizer">
+                <div class="bonus-item">
+                    <img src="/content/assets/residue - front.png" alt="Free Dried Leaf Residue" class="bonus-image">
+                    <span class="bonus-label">FREE</span>
                 </div>
+            </div>
+            <div class="product-content">
+                <h3>Liquid Organic Fertilizer</h3>
+                <p class="price">₱199 <span class="unit">/ bottle</span></p>
+                <p class="description">An all-natural liquid fertilizer derived from Madre de Cacao, ideal for improving soil nutrients.</p>
+                <div class="freebie-info">
+                    <i class="fas fa-gift"></i>
+                    <span>First 20 customers each month will receive FREE Dried Leaf Residue Natural Soil Booster pack!</span>
+                </div>
+                <a href="/frontend/showcase.html" class="btn btn-outline-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
                 <div class="text-center mt-5">
                     <a href="/frontend/showcase.html" class="btn btn-primary">
                         View All Products <i class="fas fa-arrow-right ms-2"></i>
