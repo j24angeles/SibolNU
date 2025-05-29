@@ -630,7 +630,8 @@ body {
 /* Responsive Design */
 @media (max-width: 992px) {
     .showcase-hero {
-        padding: 100px 0 60px;
+        margin-top: 50px;
+        padding: 100px 0 10px;
         min-height: auto;
     }
     

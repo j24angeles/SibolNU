@@ -45,8 +45,8 @@ html {
 /* Mobile padding improvement */
 @media (max-width: 768px) {
     .hero-section {
+        margin-top: 35px;
         padding: 100px 0 60px;
-        min-height: 85vh;
     }
 }
 
