@@ -495,15 +495,16 @@ body {
     transform: translateY(-2px);
 }
 
-.lazada-btn {
-    background: #0f146d;
+.tiktok-btn {
+    background: #000000;
     color: var(--color-white);
-    border: 2px solid #0f146d;
+    border: 2px solid #000000;
+
 }
 
-.lazada-btn:hover {
-    background: #0a0f4d;
-    border-color: #0a0f4d;
+.tiktok-btn:hover {
+    background: #ff0050;
+    border-color:  #ff0050;
     color: var(--color-white);
     transform: translateY(-2px);
 }
