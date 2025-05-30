@@ -366,6 +366,10 @@ body {
         padding: 40px 0 25px;
     }
     
+    .footer-bottom {
+        text-align: center;
+    }
+    
     .footer-bottom-links {
         justify-content: center;
         margin-top: 15px;
@@ -393,9 +397,27 @@ body {
         margin-bottom: 25px;
     }
 
+    .footer-logo-img {
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .footer-description {
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .footer-title {
+        text-align: center;
+    }
+
     .footer-title::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .footer-links {
+        text-align: center;
     }
 
     .contact-item {
@@ -405,5 +427,14 @@ body {
 
     .newsletter-signup {
         padding: 15px;
+    }
+
+    .newsletter-signup h6 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
     }
 }
