@@ -209,7 +209,12 @@ body {
 
 .benefit-card {
     background: var(--color-white);
-    padding: 2.5rem 2rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    justify-content: center;
+    align-items: center;
     border-radius: var(--border-radius);
     text-align: center;
     height: 100%;
